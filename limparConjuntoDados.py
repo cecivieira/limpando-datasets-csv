@@ -43,3 +43,20 @@ class LimparConjuntoDados:
 
             except:
                 print("Não entendemos sua resposta.\nDigite S se existem colunas a serem removidas do conjunto de dados e N se não houver.")
+
+
+    def coluna_a_remover(precisa_limpar): #Remove colunas desejadas
+        listaColunasARemover = []
+
+        if precisa_limpar == 1:
+            colunas = str(input('Digite o título das colunas que devem ser removidas do conjunto de dados separadas por vírgula: '))
+            colunasARemover = colunas.split(',')
+
+            for i in range(len(colunasARemover)):
+                ElementoSemEspaco = colunasARemover[i].strip()
+                listaColunasARemover.append(ElementoSemEspaco)
+            
+            return listaColunasARemover
+        
+        else:
+            return listaColunasARemover

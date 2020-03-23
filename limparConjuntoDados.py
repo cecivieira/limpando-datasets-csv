@@ -73,3 +73,12 @@ class LimparConjuntoDados:
         conjuntoDadosCsv = limpar_conjunto_dados.to_csv(titulo_conjunto_dados, index='False')
         
         return conjuntoDadosCsv
+
+
+classe = LimparConjuntoDados
+classe.ler_arquivo()
+classe.titulo_conjunto_dados()
+classe.precisa_limpar()
+classe.coluna_a_remover(classe.precisa_limpar)
+classe.limpar_conjunto_dados(classe.ler_arquivo, classe.coluna_a_remover)
+classe.salvar_conjunto_dados(classe.limpar_conjunto_dados, classe.titulo_conjunto_dados)

@@ -25,3 +25,21 @@ class LimparConjuntoDados:
         tituloCsv = titulo + '.csv'
 
         return tituloCsv
+
+
+    def precisa_limpar(): #Verifica se existe coluna a ser removida do conjunto de dados
+        while True:
+        
+            try:
+                precisaLimpar = str(input('Existem colunas a serem removidas do conjunto de dados (S/N)? '))
+                upperPrecisaLimpar = precisaLimpar.upper()
+                    
+                if upperPrecisaLimpar == 'N':                    
+                    return 0
+                elif upperPrecisaLimpar == 'S':
+                    return 1
+                else:
+                    raise Exception
+
+            except:
+                print("Não entendemos sua resposta.\nDigite S se existem colunas a serem removidas do conjunto de dados e N se não houver.")

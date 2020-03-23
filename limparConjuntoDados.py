@@ -67,3 +67,9 @@ class LimparConjuntoDados:
         conjuntoDadosLimpos = conjuntoDados.drop(columns=coluna_a_remover)
 
         return conjuntoDadosLimpos
+
+
+    def salvar_conjunto_dados(limpar_conjunto_dados, titulo_conjunto_dados):
+        conjuntoDadosCsv = limpar_conjunto_dados.to_csv(titulo_conjunto_dados, index='False')
+        
+        return conjuntoDadosCsv

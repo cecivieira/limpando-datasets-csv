@@ -60,3 +60,10 @@ class LimparConjuntoDados:
         
         else:
             return listaColunasARemover
+    
+
+    def limpar_conjunto_dados(ler_arquivo, coluna_a_remover): #Remove as colunas desejadas do conjunto de dados
+        conjuntoDados = ler_arquivo
+        conjuntoDadosLimpos = conjuntoDados.drop(columns=coluna_a_remover)
+
+        return conjuntoDadosLimpos
